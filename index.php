@@ -19,6 +19,8 @@ CONST flomaster=23;
 CONST pencil=40;
 CONST paint=pictures-flomaster-pencil;
 
+echo "</br>";
+
 //Задание #3
 
 $age=29;
@@ -35,6 +37,8 @@ elseif ($age>=1 && $age<=17){
 else{
     echo "Неизвестный возраст";
 }
+
+echo "</br>";
 
 //Задание #4
 
@@ -56,6 +60,8 @@ switch ($day) {
         echo "Неизвестный день";
         break;
 }
+
+echo "</br>";
 
 //Задание #5
 
@@ -94,7 +100,7 @@ foreach($cars as $key=>$value) {
 }
 
 
-var_dump($cars);
+echo "</br>";
 
 //Задание #6
 
