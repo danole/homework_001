@@ -1,13 +1,12 @@
 <?php
 
-//Домашнее задание #0
+//Задание #1
 
-CONST testConstanta = 'asd';
-$user_name = "Igor";
+$name='Илья';
+$age='29';
 
-function show_something(){
-    RETURN 'SOMETHING';
-}
-
-if (1==1)
-    echo 'hi';
+echo "Меня зовут: " . $name . ".";
+echo "<br>";
+echo "Мне: " . $age . " лет.";
+echo "<br>";
+echo "- “!|/’”\\";
