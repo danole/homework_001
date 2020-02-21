@@ -93,5 +93,53 @@ foreach($cars as $key=>$value) {
     echo "<br>";
 }
 
-echo "<pre>";
+
 var_dump($cars);
+
+//Задание #6
+
+echo "<table style='border: 1px solid black'>";
+
+for($i=1;$i<=10;$i++){
+
+    echo "<tr style='border: 1px solid black'>";
+
+    for ($j=1;$j<=10;$j++)
+    {
+
+        echo "<td style='border: 1px solid black'>";
+        if (($i*$j)%2==0 && $i==1){
+            echo "(";
+        }
+        if (($i*$j)%2==0 && $j==1){
+            echo "(";
+        }
+        if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1){
+            echo "[";
+        }
+        if (($i*$j)%2==1 && $j==1){
+            echo "[";
+        }
+
+        echo $i*$j;
+        if (($i*$j)%2==0 && $i==1){
+            echo ")";
+        }
+        if (($i*$j)%2==0 && $j==1){
+            echo ")";
+        }
+        if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1){
+            echo "]";
+        }
+        if (($i*$j)%2==1 && $j==1){
+            echo "]";
+        }
+
+        echo "</td>";
+    }
+
+    echo "</tr>";
+    echo "<br>";
+}
+
+echo "</table>";
