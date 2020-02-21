@@ -56,3 +56,42 @@ switch ($day) {
         echo "Неизвестный день";
         break;
 }
+
+//Задание #5
+
+$bmv=[
+    'model'=>'X5',
+    'speed'=>120,
+    'doors'=>5,
+    'year'=>'2015',
+];
+$toyota=[
+    'model'=>'chaser',
+    'speed'=>320,
+    'doors'=>5,
+    'year'=>'2000',
+];
+$opel=[
+    'model'=>'vectra',
+    'speed'=>100,
+    'doors'=>5,
+    'year'=>'2012',
+];
+$cars=[
+    'bmv'=>$bmv,
+    'toyota'=>$toyota,
+    'opel'=>$opel,
+];
+
+foreach($cars as $key=>$value) {
+    echo $key;
+    echo "<br>";
+    echo $value['model'] . " ";
+    echo $value['speed'] . " ";
+    echo $value['doors'] . " ";
+    echo $value['year'];
+    echo "<br>";
+}
+
+echo "<pre>";
+var_dump($cars);
