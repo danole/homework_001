@@ -17,7 +17,7 @@ echo "<br>";
 const PICTURES=80;
 const FLOMASTER=23;
 const PENCIL=40;
-const PAINT=PICTURES-FLOMASTER-PENCIL;
+echo PICTURES-FLOMASTER-PENCIL;
 
 echo "</br>";
 
