@@ -103,31 +103,31 @@ echo "</br>";
            <?php for ($j=1;$j<=10;$j++):?>
                <td style='border: 1px solid black'>
                <?php if (($i*$j)%2==0 && $i==1):
-                     echo "(";
+                         echo "(";
                      endif;
                      if (($i*$j)%2==0 && $j==1):
-                     echo "(";
+                         echo "(";
                      endif;
                      if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1):
-                     echo "[";
+                         echo "[";
                      endif;
                      if (($i*$j)%2==1 && $j==1):
-                     echo "[";
+                         echo "[";
                      endif;
 
                      echo $i*$j;
 
                      if (($i*$j)%2==0 && $i==1):
-                     echo ")";
+                         echo ")";
                      endif;
                      if (($i*$j)%2==0 && $j==1):
-                     echo ")";
+                         echo ")";
                      endif;
                      if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1):
-                     echo "]";
+                         echo "]";
                      endif;
                      if (($i*$j)%2==1 && $j==1):
-                     echo "]";
+                         echo "]";
                      endif;?>
                </td>
            <?php endfor;?>
