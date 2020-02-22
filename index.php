@@ -14,10 +14,10 @@ echo "<br>";
 
 //Задание #2
 
-CONST pictures=80;
-CONST flomaster=23;
-CONST pencil=40;
-CONST paint=pictures-flomaster-pencil;
+const PICTURES=80;
+const FLOMASTER=23;
+const PENCIL=40;
+const PAINT=PICTURES-FLOMASTER-PENCIL;
 
 echo "</br>";
 
@@ -27,14 +27,11 @@ $age=29;
 
 if ($age>=18 && $age<=65){
     echo "Вам еще работать и работать";
-}
-elseif ($age>65){
+} elseif ($age>65){
     echo "Вам пора на пенсию";
-}
-elseif ($age>=1 && $age<=17){
+} elseif ($age>=1 && $age<18){
     echo "Вам ещё рано работать";
-}
-else{
+} else{
     echo "Неизвестный возраст";
 }
 
@@ -58,7 +55,6 @@ switch ($day) {
         break;
     default:
         echo "Неизвестный день";
-        break;
 }
 
 echo "</br>";
@@ -92,60 +88,50 @@ $cars=[
 foreach($cars as $key=>$value) {
     echo $key;
     echo "<br>";
-    echo $value['model'] . " ";
-    echo $value['speed'] . " ";
-    echo $value['doors'] . " ";
-    echo $value['year'];
+    echo implode(' ',$value);
     echo "<br>";
 }
-
 
 echo "</br>";
 
 //Задание #6
 
-echo "<table style='border: 1px solid black'>";
+?>
+<table style='border: 1px solid black'>
+<?php for($i=1;$i<=10;$i++):?>
+           <tr style='border: 1px solid black'>
+           <?php for ($j=1;$j<=10;$j++):?>
+               <td style='border: 1px solid black'>
+               <?php if (($i*$j)%2==0 && $i==1):
+                     echo "(";
+                     endif;
+                     if (($i*$j)%2==0 && $j==1):
+                     echo "(";
+                     endif;
+                     if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1):
+                     echo "[";
+                     endif;
+                     if (($i*$j)%2==1 && $j==1):
+                     echo "[";
+                     endif;
 
-for($i=1;$i<=10;$i++){
+                     echo $i*$j;
 
-    echo "<tr style='border: 1px solid black'>";
-
-    for ($j=1;$j<=10;$j++)
-    {
-
-        echo "<td style='border: 1px solid black'>";
-        if (($i*$j)%2==0 && $i==1){
-            echo "(";
-        }
-        if (($i*$j)%2==0 && $j==1){
-            echo "(";
-        }
-        if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1){
-            echo "[";
-        }
-        if (($i*$j)%2==1 && $j==1){
-            echo "[";
-        }
-
-        echo $i*$j;
-        if (($i*$j)%2==0 && $i==1){
-            echo ")";
-        }
-        if (($i*$j)%2==0 && $j==1){
-            echo ")";
-        }
-        if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1){
-            echo "]";
-        }
-        if (($i*$j)%2==1 && $j==1){
-            echo "]";
-        }
-
-        echo "</td>";
-    }
-
-    echo "</tr>";
-    echo "<br>";
-}
-
-echo "</table>";
+                     if (($i*$j)%2==0 && $i==1):
+                     echo ")";
+                     endif;
+                     if (($i*$j)%2==0 && $j==1):
+                     echo ")";
+                     endif;
+                     if (($i*$j)%2==1 && $i==1 && ($i*$j)!=1):
+                     echo "]";
+                     endif;
+                     if (($i*$j)%2==1 && $j==1):
+                     echo "]";
+                     endif;?>
+               </td>
+           <?php endfor;?>
+           </tr>
+           <br>
+<?php endfor;?>
+</table>
